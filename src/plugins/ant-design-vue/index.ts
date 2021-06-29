@@ -1,10 +1,16 @@
 import type { App } from "vue"
 
-import { Button, Input } from 'ant-design-vue';
+import { Layout, Menu, Breadcrumb, Form, Result, Button, Input, Checkbox, message } from 'ant-design-vue';
 
 const antdComponents = [
+  Layout,
+  Menu,
+  Breadcrumb,
+  Form,
+  Result,
   Button,
-  Input
+  Input,
+  Checkbox,
 ]
 
 // 应用组件
@@ -13,4 +19,5 @@ export function useAntd(app: App) {
   antdComponents.forEach(com => {
     app.use(com)
   })
+  app.config.globalProperties.$message = message;
 }

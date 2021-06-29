@@ -1,0 +1,47 @@
+{
+	// Place your vue3-template 工作区 snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	"Print to console": {
+    "prefix": "vue3",
+    "body": [
+      "<!-- $0 -->",
+      "<template>",
+      "  <div></div>",
+      "</template>",
+      "",
+      "<script lang='ts'>",
+      "import { reactive,toRefs,onBeforeMount,onMounted} from 'vue'",
+      "interface DataProps {}",
+
+      "export default {",
+      "    name: '',",
+      "      setup() {",
+      "          console.log('1-开始创建组件-setup')",
+      "          const data: DataProps = reactive({",
+      ""            ,
+      "          })",
+      "          onBeforeMount(() => {",
+      "              console.log('2.组件挂载页面之前执行----onBeforeMount')",
+      "          })",
+      "          onMounted(() => {",
+      "              console.log('3.-组件挂载到页面之后执行-------onMounted')",
+      "          })",
+      "          const refData = toRefs(data);",
+      "          return {",
+      "              ...refData,",
+      "          }",
+      ""  ,
+      "      }",
+      "  };",
+      "</script>",
+      "<style lang='scss' scoped>",
+      "</style>",
+  ],
+    "description": "Log output to console"
+  }
+}

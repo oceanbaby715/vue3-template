@@ -4,6 +4,7 @@ import router from "./router"
 import { store, key } from './store'
 import { useAntd } from "./plugins/ant-design-vue"
 import "./assets/styles/common.less"
+import Api from "./api"
 
 //创建并挂载
 const app = createApp(App)
@@ -18,3 +19,6 @@ app.use(store, key)
 useAntd(app)
 
 app.mount('#app')
+
+//全局挂载 Api接口
+app.config.globalProperties.$api = Api;

@@ -1,11 +1,11 @@
 import { createRouter, createWebHashHistory } from "vue-router"
 
-import Home from "./modules/home"
-import About from "./modules/about"
+import Common from "./modules/common"
+import Movie from "./modules/movie"
 
 const routes = [
- ...Home,
- ...About
+  Movie,
+  ...Common
 ]
 
 const router = createRouter({
